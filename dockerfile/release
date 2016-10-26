@@ -1,0 +1,14 @@
+FROM juju69/webapp:test
+
+ENV ASPNETCORE_URLS http://+:5000
+
+EXPOSE 5000
+
+COPY /src/ /src/
+
+WORKDIR /src/appweb/
+
+RUN dotnet restore 
+
+CMD ["dotnet", "run"]
+
