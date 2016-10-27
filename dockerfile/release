@@ -1,4 +1,4 @@
-FROM juju69/webapp:test
+FROM microsoft/dotnet:latest
 
 ENV ASPNETCORE_URLS http://+:5000
 
