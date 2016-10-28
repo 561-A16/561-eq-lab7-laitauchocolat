@@ -1,14 +1,12 @@
-FROM microsoft/dotnet:latest
+FROM microsoft/dotnet:latest 
 
 ENV ASPNETCORE_URLS http://+:5000
 
 EXPOSE 5000
 
-COPY /src/ /src/
+COPY /publish/ /src/
 
-WORKDIR /src/appweb/
+WORKDIR /src/
 
-RUN dotnet restore 
-
-CMD ["dotnet", "run"]
+CMD ["dotnet", "appweb.dll"]
 

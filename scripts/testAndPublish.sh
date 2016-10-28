@@ -8,3 +8,4 @@ dotnet test appweb.unittests
 
 dotnet publish appweb --output /root/publish/
 
+
